@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Honk&display=swap');
+@import url('https://fonts.cdnfonts.com/css/8bit-wonder');
+@import url('https://fonts.cdnfonts.com/css/arcade-classic');
+body {
+	background-image: url('space.jpeg'); 
+    background-size: cover;
+	background-repeat: no-repeat; 
+	background-position:center;
+	background-attachment: fixed;
+	overflow: hidden; /* Hide scrollbars */
+}
+
+td {
+	border:  2px solid #333;
+	height:  100px;
+	width:  100px;
+	min-width: 100px;
+	min-height: 100px;
+	text-align:  center;
+	vertical-align:  middle;
+	font-family:  "Comic Sans MS", cursive, sans-serif;
+	font-size:  70px;
+	cursor: pointer;
+}
+
+table {
+	
+	border-collapse: collapse;
+	min-width: 600px;
+	min-height: 500px;
+	background-color: #CBC3E3;
+	margin: 50px auto;
+	padding: center; /* added padding to center it more */
+}
+
+#scoreboard {
+    font-family: '8BIT WONDER', sans-serif; /* "Comic Sans MS", cursive, sans-serif; */
+	text-align: center;
+	font-size: 25px;
+	padding: center;
+	color:white;
+	margin-top: 25px;
+}
+
+#startbtn:hover {
+    background-color: #AB83A1;
+    border: 2px solid #AB83A1;  /*remove #f15152 colors (pale red for HOVER)*/
+}
+
+.endgame button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 30px;
+    font-family: '8BIT WONDER', sans-serif; /* "Comic Sans MS", cursive, sans-serif; */
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #6A0572;
+    border: 2px solid #6A0572;
+}
+
+.endgame button:hover {
+    background-color: #AB83A1; 
+    border: 2px solid #AB83A1;
+}
+
+.endgame {
+    display: none;
+    width: 450px;
+    background-color: #FCC201;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    border-radius: 5px;
+    color: #400080;
+    font-size: 50px;
+    font-family: '8BIT WONDER', sans-serif; /* 'Honk', sans-serif ; */
+}
+
+
+.pickgamemode {
+    display: none;
+    width: 800px;
+    background-color: #CBC3E3;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    border-radius: 5px;
+    color: #c7832e;
+    font-size: 4em;
+    font-family: '8BIT WONDER', sans-serif; /* 'Honk', sans-serif ; */
+	border-radius: 20px;
+}
+
+.pickgamemode button {
+    width: 300px;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 25px;
+    font-family: 'ArcadeClassic', sans-serif;  /* '8BIT WONDER', sans-serif; /* "Comic Sans MS", cursive, sans-serif; */
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 12px;
+    color: #fff;
+    background-color: #6A0572;
+    border: 2px solid #6A0572;
+}
+
+.pickgamemode button:hover {
+    background-color: #AB83A1; 
+    border: 2px solid #AB83A1;
+}
+
+#exgm {
+	width: 100px;
+	font-size: 25px;
+	border: 2px solid #c7832e;
+	background-color: #c7832e;
+}
+
+#exgm:hover {
+    background-color: #AB83A1;
+    border: 2px solid #AB83A1;
+}
+
+.aimode {
+	display: none;
+    width: 800px;
+    background-color: #CBC3E3;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    border-radius: 5px;
+    color: #c7832e;
+    font-size: 4em;
+    font-family: '8BIT WONDER', sans-serif; /* 'Honk', sans-serif ; */
+}
+
+
+.aimode button {
+    width: 300px;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 25px;
+    font-family: '8BIT WONDER', sans-serif; /* "Comic Sans MS", cursive, sans-serif; */
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #6A0572;
+    border: 2px solid #6A0572;
+}
+
+#easy {
+color: #fcae4c;
+}
+
+#medium {
+color: #faa234;
+}
+
+#hard {
+	color: #fc8f08;
+}
+
+.aimode button:hover {
+    background-color: #AB83A1; 
+    border: 2px solid #AB83A1;
+}
+
+#exaim {
+	width: 100px;
+	font-size: 25px;
+	border: 2px solid #c7832e; 
+	background-color: #c7832e;
+}
+
+#exaim:hover {
+    background-color: #AB83A1;
+    border: 2px solid #AB83A1;
+}
+
+.returndiv {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    border-radius: 5px;
+    color: black;
+    font-size: 4em;
+    font-family: 'Honk', sans-serif ;
+}
+
+#return {
+	font-family:  'ArcadeClassic', sans-serif; /* "Comic Sans MS", cursive, sans-serif; */
+	color: #fff;
+	width: 200px;
+	font-size: 30px;
+	border-radius: 15px;
+	border: 2px solid #c7832e;
+	background-color: #c7832e;
+	padding: 32px 24px
+	cursor: pointer;
+}
+
+#return:hover {
+    background-color: #AB83A1;
+    border: 2px solid #AB83A1;
+}
+
+.roundwin {
+    display: none;
+    width: 450px;
+    background-color: #A097BA;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-size: 2em;
+    font-family: '8BIT WONDER', sans-serif; /* 'Honk', sans-serif ; */
+}
+
+.roundwin button {
+    display: inline-block;
+    padding: 10px 20px;
+	font-family: 'ArcadeClassic', sans-serif; /* "Comic Sans MS", cursive, sans-serif; */
+    font-size: 30px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #6A0572;
+    border: 2px solid #6A0572;
+}
+
+.roundwin button:hover {
+    background-color: #AB83A1; 
+    border: 2px solid #AB83A1;
+}
+
+
+
+.win-cell {
+    background-color: #6A0572;
+}
+
+.startpage {
+    width: 1100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    border-radius: 50px;
+    color:  #da9100;
+    font-size: 80px;
+    font-family: '8BIT WONDER', sans-serif;
+    background-color: #CBC3E3;	
+}
+
+.hdr {
+	background-image: linear-gradient(70deg, #6A0572, #FFB03A);
+	background-clip: text;
+	color: transparent;
+}
+
+/*
+background: linear-gradient(103.3deg, rgb(190, 11, 215) -18.7%, rgb(246, 234, 11) 90.9%);
+	background-size: 100%;
+	background-clip: text;
+	text-fill-color: transparent;
+	*/
+	
+.startpage button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 40px;
+    font-family: '8BIT WONDER', sans-serif; /* "Comic Sans MS", cursive, sans-serif; */
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 20px;
+    color: #fff;
+    background-color: #6A0572;
+    border: 2px solid #6A0572;
+}
+
+p {
+   color: white;
+   font-family: 'ArcadeClassic', sans-serif;
+}
+
+a:link {
+  color: #c7832e;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color: pink;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+
