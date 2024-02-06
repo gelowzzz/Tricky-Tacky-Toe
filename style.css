@@ -73,7 +73,7 @@ table {
     width: 450px;
     background-color: #FCC201;
     position: absolute;
-    top: 50%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
     padding-top: 50px;
@@ -234,7 +234,7 @@ color: #faa234;
     width: 450px;
     background-color: #A097BA;
     position: absolute;
-    top: 50%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
     padding-top: 50px;
