@@ -103,12 +103,37 @@
 	
 	
 	
-  <!-- <audio src="8bitbgm.mp3" autoplay loop>
-	<embed
-		src="8bitbgm.mp3"
-		loop="true"
-		autostart="true">
-  </audio> -->
+ <img src="musicbtn.png" id="musicButton" class="music-button" alt="Music Button">
+    <audio id="backgroundMusic" autoplay="" loop="">
+        <source src="8bitbgm.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!--Music-->
+    <script>
+        const musicButton = document.getElementById('musicButton');
+        const backgroundMusic = document.getElementById('backgroundMusic');
+
+        // Play the background music automatically when the page loads
+        window.addEventListener('load', function() {
+            backgroundMusic.play();
+        });
+
+        musicButton.addEventListener('click', function() {
+            if (backgroundMusic.paused) {
+                backgroundMusic.play();
+                musicButton.src = 'musicbtn.png';
+            } else {
+                backgroundMusic.pause();
+                musicButton.src = 'mutebtn.png';
+            }
+        });
+
+        const returnButton = document.getElementById('returnButton');
+    returnButton.addEventListener('click', function() {
+        window.location.href = 'index.html'; // Navigate to the index.html page
+    });
+    </script>
 	
   <script src="script2.js"></script>
   
