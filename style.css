@@ -11,6 +11,23 @@ body {
 	
 }
 
+
+/* MUSIC */
+.music-button {
+    position: fixed;
+    top: 19px;
+    right: 55px;
+    width: 58px;
+    height: 58px;
+    cursor: pointer;
+    z-index: 999; /* Ensures the button stays on top */
+    transition: transform 0.3s ease-in-out;
+}
+
+.music-button:hover {
+		opacity: 0.7;/* Increases size on hover */
+}
+
 td {
 	
 	border:  2px solid #333;
@@ -169,6 +186,13 @@ table {
     border: 2px solid #6A0572;
 }
 
+#historybtn {
+    font-family: 'ArcadeClassic', sans-serif; 
+    color: white;
+    font-size: 25px;
+}
+
+
 #easy {
 color: #fcae4c;
 }
@@ -220,7 +244,7 @@ color: #faa234;
 	border-radius: 15px;
 	border: 2px solid #c7832e;
 	background-color: #c7832e;
-	padding: 32px 24px
+	padding: 32px 24px;
 	cursor: pointer;
 }
 
