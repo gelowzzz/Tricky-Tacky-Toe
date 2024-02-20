@@ -63,7 +63,10 @@
 	
 	<div class="startpage">
 		<div class="hdr">TRICKY TAC TOE</div>
+		<br>
 		<button id="startbtn" onClick="startGame()">Start Game!</button>
+		<br>
+		<a href="easy_history.html"><button id="historybtn">Leaderboard</button></a>
 	</div>
 	
 
@@ -103,37 +106,33 @@
 	
 	
 	
- <img src="musicbtn.png" id="musicButton" class="music-button" alt="Music Button">
-    <audio id="backgroundMusic" autoplay="" loop="">
-        <source src="8bitbgm.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
+		<img src="musicbtn.png" id="musicButton" class="music-button" alt="Music Button">
+		<audio id="backgroundMusic" autoplay="" loop="">
+			<source src="8bitbgm.mp3" type="audio/mpeg">
+			Your browser does not support the audio element.
+		</audio>
+	
+		<script>
+			const musicButton = document.getElementById('musicButton');
+			const backgroundMusic = document.getElementById('backgroundMusic');
+	
+			// Play the background music automatically when the page loads
+			window.addEventListener('load', function() {
+				backgroundMusic.play();
+			});
+	
+			musicButton.addEventListener('click', function() {
+				if (backgroundMusic.paused) {
+					backgroundMusic.play();
+					musicButton.src = 'musicbtn.png';
+				} else {
+					backgroundMusic.pause();
+					musicButton.src = 'mutebtn.png';
+				}
+			});
+	
 
-    <!--Music-->
-    <script>
-        const musicButton = document.getElementById('musicButton');
-        const backgroundMusic = document.getElementById('backgroundMusic');
-
-        // Play the background music automatically when the page loads
-        window.addEventListener('load', function() {
-            backgroundMusic.play();
-        });
-
-        musicButton.addEventListener('click', function() {
-            if (backgroundMusic.paused) {
-                backgroundMusic.play();
-                musicButton.src = 'musicbtn.png';
-            } else {
-                backgroundMusic.pause();
-                musicButton.src = 'mutebtn.png';
-            }
-        });
-
-        const returnButton = document.getElementById('returnButton');
-    returnButton.addEventListener('click', function() {
-        window.location.href = 'index.html'; // Navigate to the index.html page
-    });
-    </script>
+		</script>
 	
   <script src="script2.js"></script>
   
@@ -141,7 +140,7 @@
 	<pre class="ftrtxt">
 	Tricky Tac Toe by IT222 - Lazaro  Ramos  Paolo
 	Background Image thanks to <a href="https://www.deviantart.com/postchan/art/Space-939566631" target="_blank"> postchan </a>
-	<!-- Music thanks to <a href="https://www.deviantart.com/postchan/art/Space-939566631" target="_blank"> FreeMusic </a> 
+	<!- Music thanks to <a href="https://www.deviantart.com/postchan/art/Space-939566631" target="_blank"> FreeMusic </a> 
 	</pre>
   </footer> -->
   
